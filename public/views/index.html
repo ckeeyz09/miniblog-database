@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game Feed: Home of Game Information</title>
+  </head>
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Favorites</a>
+                    </li>
+                    <li>
+                        <a href="#">Search </a>
+                    </li>
+                    <li>
+                        <a href="#">Settings</a>
+                    </li>
+                </ul> <!-- Start New user modal -->
+                <ul class="nav navbar-nav navbar-right"> 
+                  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-user-modal">
+                  Sign up!
+                  </button>
+                    <div class="modal fade bs-example-modal-lg" id="add-user-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" data-backdrop="false">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title">Create New User</h4>
+                            </div>
+                            <div class="user-modal-body">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="column-xs-6">
+                                  <form id="modal-form">
+                                    <div class="bold">
+                                      Profile Image URL
+                                    </div>
+                                    <div class="margin-top-20">
+                                      <input id="new-image" type="text" class="form-control" />
+                                    </div>
+                                    <div class="bold margin-top-20">
+                                      Name
+                                    </div>
+                                    <div class="margin-top-20">
+                                      <input id="new-name" type="text" class="form-control" />
+                                    </div>
+                                    <div class="bold margin-top-20">
+                                      Username
+                                    </div>
+                                    <div class="margin-top-20">
+                                      <input id="new-handle" type="text" class="form-control" />
+                                    </div>
+                                    <div class="bold margin-top-20">
+                                      Age
+                                    </div>
+                                    <div class="margin-top-20">
+                                      <input id="new-age" type="text" class="form-control" />
+                                    </div>
+                                    <div class="bold margin-top-20">
+                                      Location
+                                    </div>
+                                    <div class="margin-top-20">
+                                      <input id="new-location" type="text" class="form-control" />
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button id="save-user" type="submit" class="btn btn-primary">Submit</button>
+                                  </div>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> <!-- End new user modal
+                </ul>
+ -->            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+  </nav>
+  <!-- Header Image -->
+  <header class="top-header">
+  <div class="jumbotron">
+    <div class="container">
+      <h2 class="tagline">YOUR HOME FOR THE NEWEST GAME INFORMATION</h1>
+      <div class= "logo"><img src="http://imgur.com/25JPNAVb.jpg"></div>
+      </div>
+    </div>
+  </div>
+  </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+        </div>
+        <div class="col-xs-8">
+        <!--Add Post Modal-->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#add-post-modal">
+        What's on your mind?
+        </button>
+        <div id="add-post-modal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">New Update</h4>
+              </div>
+              <div class="modal-body">
+
+              <form id="status-modal-form">
+                <div class="bold">
+                  Image URL
+                </div>
+                <div class="margin-top-20">
+                  <input id="new-image" type="text" class="form-control" placeholder="Optional" />
+                </div>
+                <div class="bold margin-top-20">
+                  Game your are currently playing
+                </div>
+                <div class="margin-top-20">
+                  <input id="new-game" type="text" class="form-control" placeholder="Optional" />
+                </div>
+                <div class="bold margin-top-20">
+                  Status
+                </div>
+                <div class="margin-top-20">
+                  <textarea class="form-control" id="new-status" rows="5" placeholder="What's on your mind?" required></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button id="save-post" type="submit" class="btn btn-primary">Save Post</button>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-xs-9" id="status-list"></div>
+
+      <!--Template for new posts -->
+    <script type="text/template" id="status-template">
+      <li class="list-group-item status">
+           
+            <div class="row margin-top-20 post-container">
+              <div class="col-xs-5">
+                <img src="<%= image %>" class="img-responsive" id="new-image" />
+                <br><br>
+              </div>
+              <div class="col-xs-7">
+                <div class="margin-top-20">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">Game I am currently playing: </span><span> <%= game %> </span></div>
+                  <div class="panel-body">
+                    <div>
+                      <span class="bold">What is on my mind: </span><span> <%= status %> </span>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- delete button -->
+            <button class="close right-side delete-phrase" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+            <!-- edit link (pencil icon) to toggle form -->
+            <a class="edit-pencil" data-toggle="collapse">
+              <span class="glyphicon glyphicon-pencil edit"></span>
+            </a>
+
+            <!-- form to update phrase -->
+            <div class="collapse">
+              <br>
+              <form class="form-inline update-phrase">
+                <input type="text" class="form-control updated-image" value="<%= image %>" placeholder="New image?">
+                <input type="text" class="form-control updated-game" value="<%= game %>" placeholder="New game?">
+                <input type="text" class="form-control updated-status" value="<%= status %>" placeholder="New status?">
+                <input type="submit" class="btn btn-default" value="Update status">
+              </form>
+            </div>
+      </li>
+    </script>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- jquery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- underscore -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="scripts/script.js"></script>
+
+
+</body>
+</html>

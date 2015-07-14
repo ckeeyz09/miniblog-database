@@ -1,0 +1,59 @@
+.jumbotron {
+    height: 250px;
+    background: url('http://imgur.com/NddbXEl.jpg') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.tagline {
+    text-shadow: 0 0 10px #000;
+    color: rgba(255,255,255,.89);
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    padding-top: 50px; 
+  }
+  
+div.logo {
+    width:165px;
+    height: 165px;
+    border: inset;
+    position: absolute;
+    margin: 0 auto;
+
+}
+
+h1 {
+  text-align: center;
+
+}
+
+.modal { 
+  background: rgba(000, 000, 000, 0.8); 
+  min-height:1000000px; 
+}
+
+#post-input {
+  position:absolute;
+  width:150px;
+  height:20px;
+  top:50%;
+  left:50%;
+  margin:-100px 0 0 -150px;
+}
+
+.edit-pencil {
+  color: #aaaaaa;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit-pencil:hover {
+  color: #333333;
+}
+
+
